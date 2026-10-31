@@ -1,0 +1,42 @@
+schema_version = "1.4"
+# Copy the agent's /app into the separate verifier container.
+artifacts = ["/app"]
+
+[task]
+name = "terminal-bench/tinydb-transactions"
+description = "Implement nested, atomic transactions with savepoints in an existing open-source Python document database (TinyDB 4.8.2) without breaking existing behaviour."
+keywords = ["coding", "software-engineering", "feature-implementation", "python", "databases"]
+[[task.authors]]
+name = "Dheeraj Reddy"
+email = "dheeraj.reddy@assuretrac.com"
+
+[metadata]
+author_name = "Dheeraj Reddy"
+author_email = "dheeraj.reddy@assuretrac.com"
+difficulty = "hard"
+category = "software-engineering"
+tags = ["coding", "python", "feature-implementation", "databases"]
+expert_time_estimate_min = 180.0
+junior_time_estimate_min = 720.0
+
+[verifier]
+timeout_sec = 600.0
+environment_mode = "separate"
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+allow_internet = true
+mcp_servers = []
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]
